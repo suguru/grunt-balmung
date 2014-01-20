@@ -1,0 +1,45 @@
+{
+  "name": "grunt-balmung",
+  "description": "Grunt task to run balmung image optimizer.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/suguru/grunt-balmung",
+  "author": {
+    "name": "Suguru Namura",
+    "email": "snamura@gmail.com",
+    "url": "https://github.com/suguru/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suguru/grunt-balmung.git"
+  },
+  "bugs": {
+    "url": "https://github.com/suguru/grunt-balmung/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/suguru/grunt-balmung/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.2"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.2"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "balmung": "~0.2.0"
+  }
+}
