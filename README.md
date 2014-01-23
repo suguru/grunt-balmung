@@ -25,12 +25,20 @@ In your project's Gruntfile, add a section named `balmung` to the data object pa
 ```js
 grunt.initConfig({
   balmung: {
-    config: {
-      src: 'content/images',
-      dst: 'output/images'
+    dist: {
+      config: {
+        src: 'content/images',
+        dst: 'output/images'
+      }
     }
   },
 });
+```
+
+To execute grunt task, run
+
+```
+grunt balmung
 ```
 
 ### Configurations
@@ -48,10 +56,12 @@ Setting file path or URL. It can also use Object to set settings directly in Gru
 ```js
 grunt.initConfig({
   balmung: {
-    config: {
-      src: 'content/images',
-      dst: 'content/images',
-      settings: 'http://server:7700/export'
+    dist: {
+      config: {
+        src: 'content/images',
+        dst: 'content/images',
+        settings: 'http://server:7700/export'
+      }
     }
   },
 });
@@ -62,10 +72,12 @@ grunt.initConfig({
 ```js
 grunt.initConfig({
   balmung: {
-    config: {
-      src: 'content/images',
-      dst: 'content/images',
-      settings: '/etc/balmung/settings.json'
+    dist: {
+      config: {
+        src: 'content/images',
+        dst: 'content/images',
+        settings: '/etc/balmung/settings.json'
+      }
     }
   },
 });
@@ -76,16 +88,18 @@ grunt.initConfig({
 ```js
 grunt.initConfig({
   balmung: {
-    config: {
-      src: 'content/images',
-      dst: 'content/images',
-      settings: {
-        optipng: { level: 5 },
-        pngquant: { color: 128, speed: 3 },
-        files: {
-          content: {
-            settings: {
-              pngquant: { color: 196 }
+    dist: {
+      config: {
+        src: 'content/images',
+        dst: 'content/images',
+        settings: {
+          optipng: { level: 5 },
+          pngquant: { color: 128, speed: 3 },
+          files: {
+            content: {
+              settings: {
+                pngquant: { color: 196 }
+              }
             }
           }
         }
