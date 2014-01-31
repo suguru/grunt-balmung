@@ -30,17 +30,17 @@ exports.balmung = {
 
     test.expect(1);
 
-    var original = fs.statSync('test/fixtures/img/beta/buki_l.png');
-    var actual = fs.statSync('tmp/fixtures/img/beta/buki_l_30.png');
+    var original = fs.statSync('test/fixtures/src/img/beta/buki_l.png');
+    var actual = fs.statSync('test/fixtures/dst/img/beta/buki_l_30.png');
 
     test.ok(actual.size < original.size, 'should minify png image');
 
     [
-      'tmp/fixtures/img/beta/buki_l_10.png',
-      'tmp/fixtures/img/beta/buki_l_13.png',
-      'tmp/fixtures/img/beta/buki_l_15.png',
-      'tmp/fixtures/img/beta/buki_l_20.png',
-      'tmp/fixtures/img/beta/buki_l_30.png',
+      'test/fixtures/dst/img/beta/buki_l_10.png',
+      'test/fixtures/dst/img/beta/buki_l_13.png',
+      'test/fixtures/dst/img/beta/buki_l_15.png',
+      'test/fixtures/dst/img/beta/buki_l_20.png',
+      'test/fixtures/dst/img/beta/buki_l_30.png',
     ].forEach(fs.statSync);
 
     test.done();

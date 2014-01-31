@@ -40,6 +40,6 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "balmung": "~0.2.0"
+    "balmung": "~0.3.0"
   }
 }

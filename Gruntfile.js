@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: ['tmp'],
+      tests: ['test/fixtures/dst'],
     },
 
     // Configuration to be run (and then tested).
@@ -34,9 +34,11 @@ module.exports = function(grunt) {
       },
       dist: {
         config: {
-          src: 'test/fixtures',
-          dst: 'tmp/fixtures'
-          // ,settings: 'http://localhost:7700/export'
+          datadir: 'test/fixtures'
+          // ,settings: 'http://localhost:7700/export',
+          //optimize: {
+          //  tools: { png: [], jpg: [], gif: [] }
+          //}
         }
       }
     },
