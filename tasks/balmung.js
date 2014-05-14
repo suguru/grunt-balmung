@@ -42,8 +42,12 @@ module.exports = function(grunt) {
       list.forEach(function(task) {
         optimizer.optimize(task.base, task.file, task.ratio);
       });
-      optimizer.on('error', done);
-      optimizer.on('finish', done);
+      if (list.length === 0) {
+        done();
+      } else {
+        optimizer.on('error', done);
+        optimizer.on('finish', done);
+      }
     };
 
     tools.settings.load(tools.config, function(err) {
